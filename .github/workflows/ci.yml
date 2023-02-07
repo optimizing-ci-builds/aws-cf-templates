@@ -43,6 +43,7 @@ jobs:
 
     - run: touch starting_build_license_27
     - run: rm starting_build_license_27
+    
     - name: license
       run: |
         find . -type f -name '*.yaml' | while read file; do set -ex && grep -q 'LICENSE-2.0' "$file"; done;
